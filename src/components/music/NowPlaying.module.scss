@@ -30,8 +30,6 @@ a.track:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 :global([data-theme="dark"]) .playingLabel { color: #65d48c; }
 .title { font-size: 1rem; font-weight: 600; line-height: 1.45; overflow-wrap: anywhere; }
 .artist { font-size: 0.875rem; line-height: 1.5; color: var(--neutral-on-background-weak); overflow-wrap: anywhere; }
-.arrow { color: var(--neutral-on-background-weak); flex-shrink: 0; opacity: 0; transition: opacity 160ms; }
-.track:hover .arrow, .track:focus-visible .arrow { opacity: 1; }
 .empty { padding: 0.6rem 0; }
 .empty p { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--neutral-on-background-weak); }
 .source { display: flex; align-items: center; gap: 5px; margin: 0.65rem 0 0 72px; color: var(--neutral-on-background-weak); font-size: 0.68rem; }
@@ -51,5 +49,5 @@ a.track:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 @media (prefers-reduced-motion: reduce) {
   .equalizer i { animation: none; transform: scaleY(0.5); }
   .equalizer i:nth-child(even) { transform: scaleY(0.85); }
-  .progress span, .arrow { transition: none; }
+  .progress span { transition: none; }
 }

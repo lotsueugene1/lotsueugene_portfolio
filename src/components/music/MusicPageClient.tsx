@@ -51,14 +51,6 @@ export function MusicPageClient({
             ) : (
               <p className={styles.emptyPlaylist}>This playlist is currently unavailable.</p>
             )}
-            <a
-              className={styles.playlistLink}
-              href={playlistUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open playlist in Spotify <span aria-hidden="true">↗</span>
-            </a>
           </>
         ) : (
           <p className={styles.emptyPlaylist}>Playlists coming soon.</p>

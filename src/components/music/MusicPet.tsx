@@ -9,7 +9,7 @@ import {
   useState,
   type PointerEvent as ReactPointerEvent,
 } from "react";
-import { FiArrowUpRight, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import { FaSpotify } from "react-icons/fa6";
 import { NowPlaying } from "./NowPlaying";
 import { useNowPlaying } from "./useNowPlaying";
@@ -340,7 +340,7 @@ export function MusicPet() {
         </div>
         <NowPlaying data={data} loading={loading} compact />
         <Link href="/music" className={styles.pageLink} onClick={() => setOpen(false)}>
-          Music & playlists <FiArrowUpRight aria-hidden="true" />
+          Music & playlists
         </Link>
       </section>
     </div>

@@ -1,5 +1,16 @@
 @use "../breakpoints.scss" as breakpoints;
 
+@media (prefers-reduced-motion: reduce) {
+    .contentReveal {
+        // RevealFx sets its transform and transition duration inline.
+        transform: none !important;
+        transition: none !important;
+        filter: none !important;
+        mask-image: none !important;
+        -webkit-mask-image: none !important;
+    }
+}
+
 .hover {
     transition: var(--transition-micro-medium);
 

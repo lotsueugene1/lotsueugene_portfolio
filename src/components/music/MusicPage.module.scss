@@ -25,17 +25,6 @@
   line-height: 1.6;
 }
 
-.playlistLink {
-  display: inline-flex;
-  gap: 0.4rem;
-  margin-top: 0.85rem;
-  color: var(--neutral-on-background-weak);
-  font-size: 0.8rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.playlistLink:hover { color: var(--neutral-on-background-strong); }
-
 @keyframes appear {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }

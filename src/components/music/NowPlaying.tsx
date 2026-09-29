@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FiArrowUpRight, FiHeadphones } from "react-icons/fi";
+import { FiHeadphones } from "react-icons/fi";
 import { FaSpotify } from "react-icons/fa6";
 import type { NowPlayingResponse } from "./types";
 import { formatPlaybackTime } from "./useNowPlaying";
@@ -90,11 +90,7 @@ export function NowPlaying({
           <span className={styles.title}>{track.title}</span>
           <span className={styles.artist}>{track.artist}</span>
         </div>
-        {playing ? (
-          <Equalizer />
-        ) : track.spotifyUrl ? (
-          <FiArrowUpRight className={styles.arrow} aria-hidden="true" />
-        ) : null}
+        {playing && <Equalizer />}
       </div>
       {playing && track.durationMs > 0 && (
         <div
