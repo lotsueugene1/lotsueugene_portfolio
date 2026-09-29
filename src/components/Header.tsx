@@ -87,9 +87,11 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <>
+                  <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
+                </>
               )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
                 <>
                   <Row s={{ hide: true }}>

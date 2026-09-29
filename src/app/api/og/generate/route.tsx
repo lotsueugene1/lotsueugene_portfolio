@@ -29,7 +29,7 @@ export async function GET(request: Request) {
         width: "100%",
         height: "100%",
         padding: "6rem",
-        background: "#151515",
+        background: "linear-gradient(145deg, #111111, #2b2b2b)",
       }}
     >
       <div
@@ -69,6 +69,7 @@ export async function GET(request: Request) {
               height: "12rem",
               objectFit: "cover",
               borderRadius: "100%",
+              border: "2px solid rgba(255, 255, 255, 0.28)",
             }}
           />
           <div

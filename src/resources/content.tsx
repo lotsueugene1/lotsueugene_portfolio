@@ -1,50 +1,37 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { Line, Row, SmartLink, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-  locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
+  firstName: "Eugene",
+  lastName: "Lotsu",
+  name: "Eugene Lotsu",
+  role: "Software Engineer & AI/ML Researcher",
+  avatar: "/images/eugene/profile.jpg",
+  email: "lotsueugene@gmail.com",
+  phone: "+1 (816) 977-5825",
+  location: "America/Chicago",
+  locationLabel: "Liberty, Missouri",
+  languages: ["English"],
+  locale: "en",
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Stay in the loop</>,
+  description: <>Notes on AI systems, scientific computing, and software engineering.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/lotsueugene",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/lotsueugene",
     essential: true,
   },
   {
@@ -53,32 +40,40 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  {
+    name: "Phone",
+    icon: "phone",
+    link: "tel:+18169775825",
+    essential: true,
+  },
 ];
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image:
+    "/api/og/generate?title=Eugene%20Lotsu%3A%20Software%20Engineer%20%26%20AI%2FML%20Researcher",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: "Eugene Lotsu: Software Engineer & AI/ML Researcher",
+  description:
+    "Portfolio of Eugene Lotsu, a software engineer and AI/ML researcher building reliable intelligent systems and scientific-computing tools.",
+  headline: <>Building intelligent systems that hold up in the real world.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">AI/ML Research</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Software engineering
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/about",
   },
   subline: (
     <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      I&apos;m Eugene, a computer science student, software engineer, and researcher working across
+      agentic AI, scientific computing, and dependable production systems.
     </>
   ),
 };
@@ -86,8 +81,9 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: "About Eugene Lotsu",
+  description:
+    "Learn about Eugene Lotsu's research, software engineering experience, education, and technical skills.",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -96,60 +92,119 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <Text as="p" variant="body-default-l">
+          I&apos;m a Computer Science student at William Jewell College focused on building rigorous AI
+          systems and production software. My current research studies neural approaches to partial
+          differential equations, while my engineering work spans agentic AI, marketplace
+          infrastructure, payments, geospatial search, and reproducible experimentation.
+        </Text>
+        <SmartLink
+          href="/gallery"
+          prefixIcon="gallery"
+          suffixIcon="chevronRight"
+          style={{
+            color: "var(--neutral-on-background-strong)",
+            fontWeight: 600,
+            textDecoration: "underline",
+            textUnderlineOffset: "0.25em",
+          }}
+        >
+          If you&apos;re curious what I look like behind the work, view my gallery
+        </SmartLink>
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Experience & Research",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Wallot Research",
+        timeframe: "Aug 2026 to Present",
+        role: "Undergraduate Research Fellow",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Investigating neural-network approaches for solving partial differential equations,
+            including PINNs, Fourier Neural Operators, DeepONet, and variational PINNs.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Building a Python scientific-computing framework with NumPy and SciPy to benchmark
+            learned solutions against numerical methods and evaluate error, convergence, and model
+            behavior.
+          </>,
+          <>
+            Conducted and annotated a literature review of 10 research papers while developing a
+            reproducible workflow with Jupyter, R/Quarto, and Git toward a formal paper.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "VECINTI",
+        timeframe: "Present",
+        role: "Software Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Architected and shipped a production local-services marketplace in Next.js,
+            TypeScript, and PostgreSQL with a timezone-aware booking engine spanning six service
+            types, concurrent cart holds, resource allocation, and PostGIS search.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Built an Amazon Bedrock agent with 35 tools, scoped permissions, and human approval for
+            state-changing operations, integrated with calendar, email/SMS, 13 cron jobs, and 13
+            signed webhooks.
+          </>,
+          <>
+            Implemented Stripe Connect payments, provider payouts, subscriptions, identity
+            verification, refunds, disputes, and processing for 21+ webhook events.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "National Student Research Institution",
+        timeframe: "Summer 2026",
+        role: "AI/ML Researcher, Summer Research Hackathon",
+        achievements: [
+          <>
+            Investigated how real-world image transformations affect CLIP-based AI-generated image
+            detectors; the work was recognized among the Top 100 submissions.
+          </>,
+          <>
+            Designed a PyTorch and scikit-learn pipeline that ran 120,000+ image evaluations across
+            10 transformations and five severity levels.
+          </>,
+          <>
+            Measured degradation across AUROC, F1, precision, recall, and accuracy under
+            compression, resizing, cropping, blur, noise, and screenshot-style transformations.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Excelerate × Saint Louis University",
+        timeframe: "Aug 2025 to Sep 2025",
+        role: "Data Analyst Associate Intern & Project Lead",
+        achievements: [
+          <>
+            Cleaned and analyzed six datasets with Python, Pandas, and SQL to identify patterns in
+            engagement and opportunity distribution.
+          </>,
+          <>
+            Developed an interactive Looker Studio and Python dashboard surfacing four KPI trends
+            and translated the findings into stakeholder recommendations.
+          </>,
+          <>
+            Led a cross-functional team through weekly analytical deliverables, coordinating
+            analysis, interpretation, and presentation.
           </>,
         ],
         images: [],
@@ -157,78 +212,109 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education & Recognition",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "William Jewell College",
+        description: (
+          <>
+            <strong>B.S. in Computer Science</strong>
+            <br />
+            Expected graduation: December 2027
+            <br />
+            <br />
+            <strong>Relevant coursework</strong>
+            <br />
+            Data Structures and Algorithms
+            <br />
+            Differential Equations, Discrete Mathematics, Calculus I and II
+            <br />
+            Probability and Statistics
+            <br />
+            Computer Networks
+            <br />
+            Database Systems (SQL and NoSQL)
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Awards & Involvement",
+        description: (
+          <>
+            Wallot Research Undergraduate Research Fellow, 2026
+            <br />
+            Top 100, NSRI Summer Research Hackathon, 2026
+            <br />
+            Semifinalist and Top 1,000, AWS 10,000 AIdeas Competition
+            <br />
+            Dean&apos;s List for four consecutive semesters
+            <br />
+            Selected participant, HackMIT 2026
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Programming & Systems",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Production software, data pipelines, APIs, relational data, and modern web systems.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Python", icon: "python" },
+          { name: "TypeScript", icon: "typescript" },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "SQL", icon: "postgresql" },
+          { name: "R" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Machine Learning & Scientific Computing",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Model evaluation, numerical experiments, statistical analysis, and neural methods.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "PyTorch", icon: "pytorch" },
+          { name: "scikit-learn" },
+          { name: "NumPy" },
+          { name: "SciPy" },
+          { name: "Pandas" },
+          { name: "OpenAI CLIP" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Research",
+        description: (
+          <>
+            Experimental design, reproducible research, literature review, data visualization, and
+            quantitative model evaluation.
+          </>
+        ),
+        tags: [
+          { name: "Jupyter" },
+          { name: "R Markdown / Quarto" },
+          { name: "LaTeX" },
+          { name: "Git / GitHub", icon: "github" },
         ],
+        images: [],
+      },
+      {
+        title: "Platforms & Infrastructure",
+        description: <>Cloud services, containers, payments, and production deployment workflows.</>,
+        tags: [
+          { name: "AWS" },
+          { name: "Docker", icon: "docker" },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "PostgreSQL", icon: "postgresql" },
+        ],
+        images: [],
       },
     ],
   },
@@ -236,68 +322,43 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "Writing",
+  title: "Writing by Eugene Lotsu",
+  description: "Notes by Eugene Lotsu on AI research, scientific computing, and engineering.",
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  title: "Projects - Eugene Lotsu",
+  description:
+    "Selected AI research, agentic systems, data platforms, and software engineering projects by Eugene Lotsu.",
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  title: "Gallery by Eugene Lotsu",
+  description: "Selected moments from Eugene Lotsu's work, research, and life.",
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
+      src: "/images/eugene/hackmit-2026.jpg",
+      alt: "Eugene Lotsu standing beside the HackMIT 2026 banner",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
+      src: "/images/eugene/formal-portrait.jpg",
+      alt: "Eugene Lotsu in a black suit",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
+      src: "/images/eugene/mirror-portrait.jpg",
+      alt: "Eugene Lotsu taking a mirror portrait",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
+      src: "/images/eugene/structor-demo.jpg",
+      alt: "Eugene Lotsu's STRUCTOR project displayed at HackMIT 2026",
       orientation: "vertical",
     },
   ],

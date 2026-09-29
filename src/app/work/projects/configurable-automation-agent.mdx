@@ -1,0 +1,33 @@
+---
+title: "Configurable Automation Agent"
+publishedAt: "2026-07-01"
+summary: "A modular Python agent with persistent state, iterative planning, sandboxed tools, and automated program verification."
+images: []
+tags:
+  - "Python"
+  - "Agentic AI"
+  - "Persistent State"
+  - "Sandboxed Execution"
+  - "Program Verification"
+team: []
+---
+
+## Overview
+
+I built a configurable Python agent for code analysis, debugging, documentation, file inspection, and program verification. The system is designed around explicit tools and bounded execution rather than unrestricted access.
+
+## Planning and state
+
+The agent maintains persistent state and can plan, act, inspect results, and self-correct across as many as 20 reasoning cycles. Its modular structure makes tools and task behavior easier to extend without rewriting the core loop.
+
+## Sandboxed execution
+
+File and Python operations run inside a controlled environment. This reduces the risk of unintended changes while still allowing the agent to inspect programs and validate their behavior.
+
+## Verification
+
+An automated validation layer checks program output and task results. The implementation achieved a 100% pass rate across nine verification tests.
+
+## What I learned
+
+Useful agents need more than a capable model: they need clear state, narrow tools, observable outcomes, recovery paths, and tests that make success measurable.

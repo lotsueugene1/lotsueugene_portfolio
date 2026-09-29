@@ -1,0 +1,34 @@
+---
+title: "Stress-testing CLIP Image Detectors"
+publishedAt: "2026-08-15"
+summary: "A 120,000+ evaluation study measuring how CLIP-based AI-image detectors degrade under realistic image transformations."
+images: []
+tags:
+  - "Python"
+  - "PyTorch"
+  - "scikit-learn"
+  - "OpenAI CLIP"
+  - "Model Evaluation"
+  - "Experimental Design"
+team: []
+---
+
+## Research question
+
+AI-generated image detectors are often evaluated on clean benchmark data, while images in the real world are compressed, resized, cropped, blurred, noised, and captured through screenshots. I investigated how well a CLIP-based detector holds up after those transformations.
+
+## Experimental design
+
+I designed and implemented a PyTorch and scikit-learn pipeline around CLIP ViT-B/32. The study covered ten transformations at five severity levels and completed more than 120,000 image evaluations.
+
+## Evaluation
+
+Detector behavior was measured with AUROC, F1, precision, recall, and accuracy. Tracking each metric across increasing severity made it possible to distinguish gradual degradation from sharper failure points.
+
+## Outcome
+
+The project quantified robustness gaps that clean-data evaluation can conceal. It was recognized among the Top 100 submissions in the National Student Research Institution Summer Research Hackathon 2026.
+
+## Tools
+
+Python, PyTorch, scikit-learn, OpenAI CLIP, NumPy, Pandas, and reproducible experiment pipelines.

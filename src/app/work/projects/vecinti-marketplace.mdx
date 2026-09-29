@@ -1,0 +1,34 @@
+---
+title: "VECINTI Marketplace & Agent Platform"
+publishedAt: "2026-09-20"
+summary: "A production local-services marketplace combining a timezone-aware booking engine, geospatial discovery, agentic AI, and Stripe Connect infrastructure."
+images: []
+tags:
+  - "Next.js"
+  - "TypeScript"
+  - "PostgreSQL"
+  - "PostGIS"
+  - "Amazon Bedrock"
+  - "Stripe Connect"
+team: []
+---
+
+## Overview
+
+At VECINTI, I architected and shipped a production marketplace for booking local services. The platform brings scheduling, resource allocation, location-aware discovery, payments, and AI-assisted operations into one system built with Next.js, TypeScript, and PostgreSQL.
+
+## Booking and discovery
+
+The booking engine supports six service types while accounting for time zones, concurrent cart holds, and staff or resource availability. PostGIS powers geospatial search, and a six-signal ranking system turns location and quality signals into useful results.
+
+## Agentic operations
+
+I built an AI system on Amazon Bedrock with 35 tools. Permissions are scoped, and state-changing actions require human approval. Calendar, email, SMS, 13 scheduled jobs, and 13 signed webhooks connect the agent to real operational workflows.
+
+## Payments infrastructure
+
+Stripe Connect supports provider payouts, subscriptions, identity verification, refunds, disputes, and event-driven processing across more than 21 webhook event types.
+
+## Engineering focus
+
+This work required careful coordination across time, money, location, and automation, where small inconsistencies quickly become user-facing failures. The architecture emphasizes explicit state transitions, secure integration boundaries, and reliable background processing.

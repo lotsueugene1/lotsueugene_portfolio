@@ -1,4 +1,4 @@
-import { Flex, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text } from "@once-ui-system/core";
 import GalleryView from "@/components/gallery/GalleryView";
 import { baseURL, gallery, person } from "@/resources";
 
@@ -14,7 +14,7 @@ export async function generateMetadata() {
 
 export default function Gallery() {
   return (
-    <Flex maxWidth="l">
+    <Column maxWidth="l" fillWidth gap="l" paddingTop="24">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -28,7 +28,15 @@ export default function Gallery() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      <Column horizontal="center" gap="8" marginBottom="l">
+        <Heading align="center" variant="display-strong-m">
+          Gallery
+        </Heading>
+        <Text align="center" variant="body-default-l" onBackground="neutral-weak">
+          A growing collection of work, research, and life beyond the screen.
+        </Text>
+      </Column>
       <GalleryView />
-    </Flex>
+    </Column>
   );
 }

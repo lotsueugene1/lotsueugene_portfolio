@@ -1,0 +1,33 @@
+---
+title: "STRUCTOR: Repository Intelligence"
+publishedAt: "2026-09-15"
+summary: "A deterministic repository-analysis engine and semantic reconciliation system built at HackMIT to recover architecture from real codebases."
+images: []
+tags:
+  - "Repository Analysis"
+  - "AWS Bedrock"
+  - "Claude Sonnet 4.5"
+  - "MCP"
+  - "Deterministic Testing"
+team: []
+---
+
+## The challenge
+
+Large repositories are difficult for both people and AI systems to understand safely. Archives may contain thousands of entries, generated files, secrets, and contradictory implementation signals. STRUCTOR was built to recover useful architecture without treating every file as equally trustworthy.
+
+## Deterministic repository analysis
+
+I engineered an analysis engine that processes archives up to 20 MB, 5,000 entries, and 400 prioritized files. The pipeline filters secrets and unsafe content, scores relevant files, and reconstructs relationships between components.
+
+## Semantic reconciliation
+
+The reconciliation engine models five delta types and seven work-contract states. Evidence tracking and dependency validation make disagreements between documented intent and repository reality explicit and inspectable.
+
+## Grounded exploration
+
+Claude Sonnet 4.5, accessed through Amazon Bedrock, uses nine read-only MCP tools to explore the indexed repository. Five interactive architecture views help users move from high-level structure to the supporting evidence.
+
+## Reliability
+
+Thirty-two deterministic tests validate the core analysis and reconciliation behavior. The result is a system designed for repeatable output, bounded inputs, and evidence-grounded answers rather than unconstrained codebase summarization.

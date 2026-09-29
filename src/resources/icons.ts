@@ -12,6 +12,10 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiOutlinePhone,
+  HiOutlineAcademicCap,
+  HiOutlineBeaker,
+  HiOutlineCodeBracket,
 } from "react-icons/hi2";
 
 import {
@@ -27,6 +31,11 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiPython,
+  SiTypescript,
+  SiPostgresql,
+  SiPytorch,
+  SiDocker,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -54,10 +63,19 @@ export const iconLibrary: Record<string, IconType> = {
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
+  phone: HiOutlinePhone,
+  academic: HiOutlineAcademicCap,
+  research: HiOutlineBeaker,
+  code: HiOutlineCodeBracket,
   javascript: SiJavascript,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
+  python: SiPython,
+  typescript: SiTypescript,
+  postgresql: SiPostgresql,
+  pytorch: SiPytorch,
+  docker: SiDocker,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,
