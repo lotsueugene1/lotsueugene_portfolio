@@ -1,6 +1,7 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import styles from "./work.module.scss";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -14,7 +15,7 @@ export async function generateMetadata() {
 
 export default function Work() {
   return (
-    <Column maxWidth="l" fillWidth paddingTop="80">
+    <Column className={styles.page} maxWidth="l" fillWidth>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -28,7 +29,7 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="80" variant="heading-strong-xl">
+      <Heading className={styles.heading} variant="heading-strong-xl">
         {work.title}
       </Heading>
       <Projects />

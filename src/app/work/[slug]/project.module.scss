@@ -1,0 +1,15 @@
+@use "../../../components/breakpoints.scss" as breakpoints;
+
+@media (max-width: breakpoints.$s) {
+    .page {
+        padding-bottom: calc(var(--static-space-80) + var(--static-space-32));
+    }
+
+    .title {
+        max-width: 100%;
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        overflow-wrap: anywhere;
+    }
+}

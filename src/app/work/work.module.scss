@@ -1,0 +1,20 @@
+@use "../../components/breakpoints.scss" as breakpoints;
+
+.page {
+    padding-top: var(--static-space-80);
+}
+
+.heading {
+    margin-bottom: var(--static-space-80);
+}
+
+@media (max-width: breakpoints.$s) {
+    .page {
+        padding-top: var(--static-space-32);
+        padding-bottom: calc(var(--static-space-80) + var(--static-space-32));
+    }
+
+    .heading {
+        margin-bottom: var(--static-space-48);
+    }
+}

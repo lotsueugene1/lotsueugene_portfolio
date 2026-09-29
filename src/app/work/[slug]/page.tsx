@@ -19,6 +19,7 @@ import { baseURL, about, person, work } from "@/resources";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
+import styles from "./project.module.scss";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
@@ -73,7 +74,7 @@ export default async function Project({
     })) || [];
 
   return (
-    <Column as="section" maxWidth="m" horizontal="center" gap="l">
+    <Column className={styles.page} as="section" maxWidth="m" horizontal="center" gap="l">
       <Schema
         as="blogPosting"
         baseURL={baseURL}
@@ -95,7 +96,9 @@ export default async function Project({
         <SmartLink href="/work">
           <Text variant="label-strong-m">Projects</Text>
         </SmartLink>
-        <Heading variant="display-strong-m">{post.metadata.title}</Heading>
+        <Heading className={styles.title} variant="display-strong-m">
+          {post.metadata.title}
+        </Heading>
         <Text variant="body-default-l" onBackground="neutral-weak" align="center">
           {post.metadata.summary}
         </Text>
