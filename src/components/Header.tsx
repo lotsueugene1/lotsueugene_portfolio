@@ -98,6 +98,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
+                      size="l"
                       prefixIcon="person"
                       href="/about"
                       selected={pathname === "/about"}
@@ -117,6 +118,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
+                      size="l"
                       prefixIcon="grid"
                       href="/work"
                       selected={pathname.startsWith("/work")}
@@ -136,6 +138,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
+                      size="l"
                       prefixIcon="gallery"
                       href="/gallery"
                       selected={pathname.startsWith("/gallery")}
@@ -146,7 +149,12 @@ export const Header = () => {
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
+                  <Row s={{ hide: true }}>
+                    <ThemeToggle />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ThemeToggle size="l" />
+                  </Row>
                 </>
               )}
             </Row>
