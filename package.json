@@ -15,7 +15,6 @@
     "@once-ui-system/core": "latest",
     "classnames": "^2.5.1",
     "gray-matter": "^4.0.3",
-    "lint-staged": "^16.1.5",
     "next": "^16.0.10",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.2.4",

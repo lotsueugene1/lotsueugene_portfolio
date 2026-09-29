@@ -11,7 +11,6 @@ import {
 const baseURL: string = "https://lotsueugene.vercel.app";
 
 const routes: RoutesConfig = {
-  "/": false,
   "/about": true,
   "/work": true,
   "/gallery": true,
