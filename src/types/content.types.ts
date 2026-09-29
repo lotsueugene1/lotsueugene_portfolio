@@ -194,6 +194,15 @@ export interface About extends BasePageConfig {
 export interface Work extends BasePageConfig {}
 
 /**
+ * Music page configuration.
+ * @description Metadata and navigation label for the live Spotify page.
+ */
+export interface Music extends BasePageConfig {
+  /** Your public Spotify playlist URL. */
+  playlistUrl?: string;
+}
+
+/**
  * Gallery page configuration.
  * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
  */

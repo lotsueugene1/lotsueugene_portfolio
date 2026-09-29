@@ -5,6 +5,7 @@ export {
   about,
   work,
   gallery,
+  music,
 } from "./content";
 
 export {

@@ -1,0 +1,45 @@
+.sections { display: grid; gap: 3rem; }
+.section { min-width: 0; animation: appear 450ms ease both; }
+.section:nth-child(2) { animation-delay: 80ms; }
+
+.section h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+}
+
+.embed {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  color-scheme: normal;
+}
+
+.emptyPlaylist {
+  margin: 0;
+  color: var(--neutral-on-background-weak);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.playlistLink {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  color: var(--neutral-on-background-weak);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.playlistLink:hover { color: var(--neutral-on-background-strong); }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section { animation: none; }
+}

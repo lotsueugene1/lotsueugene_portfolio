@@ -1,4 +1,4 @@
-import { About, Gallery, Person, Social, Work } from "@/types";
+import { About, Gallery, Music, Person, Social, Work } from "@/types";
 import { SmartLink, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -294,6 +294,14 @@ const work: Work = {
     "Selected AI research, agentic systems, data platforms, and software engineering projects by Eugene Lotsu.",
 };
 
+const music: Music = {
+  path: "/music",
+  label: "Music",
+  title: "Music Eugene Lotsu is listening to",
+  description: "See what Eugene Lotsu is playing on Spotify or listened to most recently.",
+  playlistUrl: "https://open.spotify.com/playlist/2lKX96airSmzFWA5BH0Qkk",
+};
+
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
@@ -323,4 +331,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, about, work, gallery };
+export { person, social, about, work, gallery, music };

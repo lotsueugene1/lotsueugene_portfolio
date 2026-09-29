@@ -8,7 +8,12 @@ import {
   HiOutlinePhone,
 } from "react-icons/hi2";
 
-import { PiUserCircleDuotone, PiGridFourDuotone, PiImageDuotone } from "react-icons/pi";
+import {
+  PiUserCircleDuotone,
+  PiGridFourDuotone,
+  PiImageDuotone,
+  PiHeadphonesDuotone,
+} from "react-icons/pi";
 
 import {
   SiJavascript,
@@ -30,6 +35,7 @@ export const iconLibrary: Record<string, IconType> = {
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
   gallery: PiImageDuotone,
+  music: PiHeadphonesDuotone,
   github: FaGithub,
   linkedin: FaLinkedin,
   phone: HiOutlinePhone,
