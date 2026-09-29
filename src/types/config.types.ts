@@ -30,8 +30,6 @@ export type RoutesConfig = Record<`/${string}`, boolean>;
 /**
  * Protected route configuration.
  */
-export type ProtectedRoutesConfig = Record<`/${string}`, boolean>;
-
 /**
  * Font configuration for each variant.
  */
@@ -117,68 +115,4 @@ export type EffectsConfig = {
     thickness: number;
     angle: number;
   };
-};
-
-/**
- * Mailchimp configuration for newsletter forms.
- */
-export type MailchimpConfig = {
-  action: string;
-  effects: EffectsConfig;
-};
-
-/**
- * Schema data for SEO/meta tags.
- */
-export type SchemaConfig = {
-  logo: string;
-  type: string;
-  name: string;
-  description: string;
-  email: string;
-};
-
-/**
- * Social links for organization.
- */
-export type SameAsConfig = {
-  threads: string;
-  linkedin: string;
-  discord: string;
-};
-
-/**
- * Social sharing configuration for blog posts.
- */
-export type SocialSharingConfig = {
-  display: boolean;
-  platforms: {
-    x: boolean;
-    linkedin: boolean;
-    facebook: boolean;
-    pinterest: boolean;
-    whatsapp: boolean;
-    reddit: boolean;
-    telegram: boolean;
-    email: boolean;
-    copyLink: boolean;
-  };
-};
-
-/**
- * Top-level config types for once-ui.config.js
- */
-export type OnceUIConfig = {
-  display: DisplayConfig;
-  mailchimp: MailchimpConfig;
-  routes: RoutesConfig;
-  protectedRoutes: ProtectedRoutesConfig;
-  baseURL: string;
-  fonts: FontsConfig;
-  style: StyleConfig;
-  schema: SchemaConfig;
-  sameAs: SameAsConfig;
-  socialSharing: SocialSharingConfig;
-  effects: EffectsConfig;
-  dataStyle: DataStyleConfig;
 };

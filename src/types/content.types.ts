@@ -40,19 +40,6 @@ export type Person = {
 };
 
 /**
- * Newsletter Section
- * @description The below information will be displayed on the Home page in Newsletter block
- */
-export type Newsletter = {
-  /** Whether to display the newsletter section */
-  display: boolean;
-  /** Title of the newsletter   */
-  title: React.ReactNode;
-  /** Description of the newsletter */
-  description: React.ReactNode;
-};
-
-/**
  * Social link configuration.
  */
 export type Social = Array<{
@@ -90,27 +77,6 @@ export interface BasePageConfig {
   description: string;
   /** OG Image should be put inside `public/images` folder */
   image?: `/images/${string}` | string;
-}
-
-/**
- * Home page configuration.
- */
-export interface Home extends BasePageConfig {
-  /** The image to be displayed in metadata
-   *
-   * The image needs to be put inside `/public/images/` directory
-   */
-  image: `/images/${string}` | string;
-  /** The headline of the home page */
-  headline: React.ReactNode;
-  /** Featured badge, which appears above the headline */
-  featured: {
-    display: boolean;
-    title: React.ReactNode;
-    href: string;
-  };
-  /** The sub text which appears below the headline */
-  subline: React.ReactNode;
 }
 
 /**
@@ -220,12 +186,6 @@ export interface About extends BasePageConfig {
     }>;
   };
 }
-
-/**
- * Blog page configuration.
- * @description Configuration for the Blog page, including metadata and navigation label.
- */
-export interface Blog extends BasePageConfig {}
 
 /**
  * Work/projects page configuration.

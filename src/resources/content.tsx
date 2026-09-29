@@ -1,5 +1,5 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, SmartLink, Text } from "@once-ui-system/core";
+import { About, Gallery, Person, Social, Work } from "@/types";
+import { SmartLink, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Eugene",
@@ -13,12 +13,6 @@ const person: Person = {
   locationLabel: "Liberty, Missouri",
   languages: ["English"],
   locale: "en",
-};
-
-const newsletter: Newsletter = {
-  display: false,
-  title: <>Stay in the loop</>,
-  description: <>Notes on AI systems, scientific computing, and software engineering.</>,
 };
 
 const social: Social = [
@@ -48,36 +42,6 @@ const social: Social = [
   },
 ];
 
-const home: Home = {
-  path: "/",
-  image:
-    "/api/og/generate?title=Eugene%20Lotsu%3A%20Software%20Engineer%20%26%20AI%2FML%20Researcher",
-  label: "Home",
-  title: "Eugene Lotsu: Software Engineer & AI/ML Researcher",
-  description:
-    "Portfolio of Eugene Lotsu, a software engineer and AI/ML researcher building reliable intelligent systems and scientific-computing tools.",
-  headline: <>Building intelligent systems that hold up in the real world.</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">AI/ML Research</strong>
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Software engineering
-        </Text>
-      </Row>
-    ),
-    href: "/about",
-  },
-  subline: (
-    <>
-      I&apos;m Eugene, a computer science student, software engineer, and researcher working across
-      agentic AI, scientific computing, and dependable production systems.
-    </>
-  ),
-};
-
 const about: About = {
   path: "/about",
   label: "About",
@@ -101,9 +65,9 @@ const about: About = {
     description: (
       <>
         <Text as="p" variant="body-default-l">
-          I&apos;m a Computer Science student at William Jewell College focused on building rigorous AI
-          systems and production software. My current research studies neural approaches to partial
-          differential equations, while my engineering work spans agentic AI, marketplace
+          I&apos;m a Computer Science student at William Jewell College focused on building rigorous
+          AI systems and production software. My current research studies neural approaches to
+          partial differential equations, while my engineering work spans agentic AI, marketplace
           infrastructure, payments, geospatial search, and reproducible experimentation.
         </Text>
         <SmartLink
@@ -153,9 +117,9 @@ const about: About = {
         role: "Software Engineer",
         achievements: [
           <>
-            Architected and shipped a production local-services marketplace in Next.js,
-            TypeScript, and PostgreSQL with a timezone-aware booking engine spanning six service
-            types, concurrent cart holds, resource allocation, and PostGIS search.
+            Architected and shipped a production local-services marketplace in Next.js, TypeScript,
+            and PostgreSQL with a timezone-aware booking engine spanning six service types,
+            concurrent cart holds, resource allocation, and PostGIS search.
           </>,
           <>
             Built an Amazon Bedrock agent with 35 tools, scoped permissions, and human approval for
@@ -307,7 +271,9 @@ const about: About = {
       },
       {
         title: "Platforms & Infrastructure",
-        description: <>Cloud services, containers, payments, and production deployment workflows.</>,
+        description: (
+          <>Cloud services, containers, payments, and production deployment workflows.</>
+        ),
         tags: [
           { name: "AWS" },
           { name: "Docker", icon: "docker" },
@@ -318,13 +284,6 @@ const about: About = {
       },
     ],
   },
-};
-
-const blog: Blog = {
-  path: "/blog",
-  label: "Writing",
-  title: "Writing by Eugene Lotsu",
-  description: "Notes by Eugene Lotsu on AI research, scientific computing, and engineering.",
 };
 
 const work: Work = {
@@ -364,4 +323,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, about, work, gallery };

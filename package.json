@@ -14,7 +14,6 @@
     "@next/mdx": "^16.0.10",
     "@once-ui-system/core": "latest",
     "classnames": "^2.5.1",
-    "cookie": "^1.0.2",
     "gray-matter": "^4.0.3",
     "lint-staged": "^16.1.5",
     "next": "^16.0.10",
@@ -27,7 +26,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/cookie": "^0.6.0",
     "@types/node": "^20.17.30",
     "@types/react": "^19.2.4",
     "@types/react-dom": "^19.2.3",

@@ -13,16 +13,16 @@ import {
   RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
-import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home, person } from "@/resources";
+import { Footer, Header, Providers } from "@/components";
+import { about, baseURL, effects, fonts, style, dataStyle, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: home.title,
-    description: home.description,
+    title: about.title,
+    description: about.description,
     baseURL: baseURL,
-    path: home.path,
-    image: home.image,
+    path: about.path,
+    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
   });
 }
 
@@ -159,7 +159,7 @@ export default async function RootLayout({
           <Header />
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
             <Flex horizontal="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
+              {children}
             </Flex>
           </Flex>
           <Footer />
