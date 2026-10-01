@@ -3,6 +3,7 @@ import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
 
 import classNames from "classnames";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import {
@@ -168,6 +169,7 @@ export default async function RootLayout({
           <Analytics />
         </Column>
       </Providers>
+      <GoogleAnalytics gaId="G-7TJ9VQQEMF" />
     </Flex>
   );
 }
