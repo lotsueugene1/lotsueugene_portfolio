@@ -16,6 +16,18 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/about/res",
+        destination: "/about",
+      },
+      {
+        source: "/about/swe",
+        destination: "/about",
+      },
+    ];
+  },
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
   sassOptions: {
