@@ -26,6 +26,10 @@ const nextConfig = {
         source: "/about/swe",
         destination: "/about",
       },
+      {
+        source: "/about/bids",
+        destination: "/about",
+      },
     ];
   },
   pageExtensions: ["ts", "tsx", "md", "mdx"],
