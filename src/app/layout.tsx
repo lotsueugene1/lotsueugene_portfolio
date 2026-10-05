@@ -104,6 +104,11 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script
+          data-goatcounter="https://cant.goatcounter.com/count"
+          async
+          src="https://gc.zgo.at/count.js"
+        />
       </head>
       <Providers>
         <Column
