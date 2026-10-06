@@ -30,6 +30,10 @@ const nextConfig = {
         source: "/about/bids",
         destination: "/about",
       },
+      {
+        source: "/about/brainlab",
+        destination: "/about",
+      },
     ];
   },
   pageExtensions: ["ts", "tsx", "md", "mdx"],
